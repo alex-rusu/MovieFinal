@@ -1,0 +1,10 @@
+<ul class="list-group">
+    <li class = "list-group-item active">Movies</li>
+    <li *ngFor="let movie of movies" class="list-group-item"
+      (click) = "selectMovie(movie)"
+        [ngClass] ="{'active': movie.id == selectedMovie.id}"
+      >
+    {{movie.title}}
+    </li>
+  </ul>
+  {{selectedMovie.modules.length}}
