@@ -4,7 +4,7 @@
       (click) = "selectMovie(movie)"
         [ngClass] ="{'active': movie.id == selectedMovie.id}"
       >
-    {{movie.title}}
+    {{movie.title, movie.year, movie.rating, movie.director, movie.movieSummary, movie.genre}}
     </li>
   </ul>
   {{selectedMovie.modules.length}}
