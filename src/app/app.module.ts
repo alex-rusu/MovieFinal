@@ -11,6 +11,8 @@ import {FormsModule} from "@angular/forms";
 import {UserService} from "./services/user.service.client";
 import {MovieService} from "./services/MovieService";
 import { MovieNavigatorComponent } from './movie-navigator/movie-navigator.component';
+import { MovieGenreNavigatorComponent } from './moviegenre-navigator/moviegenre-navigator.component';
+import { MovieGenreService } from './services/MovieGenreService';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { MovieNavigatorComponent } from './movie-navigator/movie-navigator.compo
     ProfileComponent,
     RegisterComponent,
     LoginComponent,
-    MovieNavigatorComponent
+    MovieNavigatorComponent,
+    MovieGenreNavigatorComponent
   ],
   imports: [
     routing,
@@ -26,7 +29,7 @@ import { MovieNavigatorComponent } from './movie-navigator/movie-navigator.compo
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [UserService, MovieService],
+  providers: [UserService, MovieService, MovieGenreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
